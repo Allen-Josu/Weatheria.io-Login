@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+.heading,
+.signup {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 8px;
+    font-size: 18px;
+}
+
+.heading {
+    font-size: 28px !important;
+    font-weight: bold;
+}
+
+.warning {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;
+}
