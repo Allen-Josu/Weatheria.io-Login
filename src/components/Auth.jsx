@@ -77,10 +77,13 @@ function Auth({ id }) {
 
     return (
         <>
-            <div className="d-flex  justify-content-center align-items-center" style={{ backgroundColor: "#7CB9E8", height: "100vh" }} >
-                <Box component={Paper} eleveation={15} className="d-flex flex-column w-25 shadow-5 py-4 rounded-3 align-items-center">
+            <div className="container-fluid" style={{backgroundColor:"#7CB9E8",height:"100vh"}}>
+                <div className="row d-flex pt-5">
+                    <div className="col-md-4"></div>
+                    <div className="col-md-4 d-flex justify-content-center px-5">
+                    <Box component={Paper} eleveation={15} className="d-flex flex-column w-100 shadow-5 py-4 rounded-3 align-items-center">
                     <p className="heading">{id === "signup" ? "Register" : "Welcome Back"}</p>
-                    <form onSubmit={Submit} className="w-100 px-5 d-flex gap-3 flex-column justify-content-center">
+                    <form onSubmit={Submit} className="w-100 px-4 d-flex gap-3 flex-column justify-content-center">
                         {
                             id === "signup" && <div className="d-flex flex-column">
                                 <TextField id="outlined-basic" value={username || ""} name="username" onChange={Validate} className="w-100 " label="Username" variant="outlined" />
@@ -119,6 +122,9 @@ function Auth({ id }) {
                         id === "signup" ? <p>Already a user? <Link to="/login" >Sign in</Link></p> : <p>New User? <Link to="/" >Sign up</Link> Here</p>
                     }
                 </Box>
+                    </div>
+                    <div className="col-md-4"></div>
+                </div>
             </div>
         </>
     )
