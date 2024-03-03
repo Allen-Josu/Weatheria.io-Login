@@ -100,14 +100,14 @@ function Auth({ id }) {
                             }
                         </div>
                         <div className="d-flex flex-column">
-                            <TextField id="outlined-basic" name="password" value={password || ""} onChange={Validate} className="w-100 " label="Password" variant="outlined" />
+                            <TextField id="outlined-basic" type="password" name="password" value={password || ""} onChange={Validate} className="w-100 " label="Password" variant="outlined" />
                             {
                                 !ispassword && <p className="text-danger warning">Special Character should not use</p>
                             }
                         </div>
                         {
                             id === "signup" && <div className="d-flex flex-column">
-                                <TextField id="outlined-basic" name="confirm_password" value={confirm_password || ""} onChange={Validate} className="w-100" label="Confirm Password" variant="outlined" />
+                                <TextField id="outlined-basic" type="password" name="confirm_password" value={confirm_password || ""} onChange={Validate} className="w-100" label="Confirm Password" variant="outlined" />
                                 {
                                     !isconfirmpassword && <p className="text-danger warning">Should be same as password</p>
                                 }
